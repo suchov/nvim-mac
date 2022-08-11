@@ -1,0 +1,67 @@
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set exrc
+set guicursor=
+set relativenumber
+set number
+set nohlsearch
+set hidden
+set noerrorbells
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set scrolloff=8
+set colorcolumn=80
+set signcolumn=yes
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+"having longer updatetime (default is 4000 ms = 4 s) leads to noicable
+"delays and poor user experience.
+set updatetime=50
+
+"Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'gruvbox-community/gruvbox'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+colorscheme gruvbox
+highlight Normal guibg=none
+
+let mapleader = " "
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep for > ")})<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
