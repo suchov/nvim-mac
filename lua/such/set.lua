@@ -6,6 +6,7 @@ vim.opt.scrolloff = 16
 vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.guicursor = ""
+vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
